@@ -1,0 +1,93 @@
+<html>
+
+<head>
+	<link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet">
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		body {
+			touch-action: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<div style="display:flex;width: 650px;margin:0 30px;">
+			<span style='font-size:25px;'>&#128545;</span>
+			<span style='font-size:25px;position:relative;left:118px;'>&#128547;</span>
+			<span style='font-size:25px;position:relative;left:235px;'>&#128528;</span>
+			<span style='font-size:25px;position:relative;left:350px;'>&#128522;</span>
+			<span style='font-size:25px;position:relative;left:465px;'>&#129321;</span>
+		</div>
+		<div class="slider_container" style="width: 600px;margin:5px 50px;">
+			<div id="gradient_slider"></div>
+		</div>
+	</div>
+	<style>
+		/* customize the background color of the slider's tracker element */
+		#gradient_slider.e-control.e-slider .e-slider-track {
+			background: -webkit-linear-gradient(90deg, red 0%, yellow 50%, green 100%);
+			background: linear-gradient(90deg, red 0%, yellow 75%, green 100%);
+			background: -moz-linear-gradient(90deg, red 0%, yellow 75%, green 85%)
+				/* adjusted top of this element for this sample, you can adjust based on your application if needed */
+				top: calc(50% - 3px) !important;
+		}
+
+		.slider_container {
+			margin-top: 40px;
+		}
+
+		.slider-userselect {
+			-webkit-user-select: none;
+			/* Safari 3.1+ */
+			-moz-user-select: none;
+			/* Firefox 2+ */
+			-ms-user-select: none;
+			/* IE 10+ */
+			user-select: none;
+			/* Standard syntax */
+		}
+
+		/* customize the tracker element of slider */
+		#gradient_slider.e-control.e-slider .e-slider-track {
+			height: 16px;
+			top: calc(50% - 4px);
+			border-radius: 5px;
+		}
+
+		/* customize the hanlde element of slider */
+		.e-control-wrapper.e-slider-container .e-slider .e-handle {
+			border-radius: 50%;
+			box-sizing: border-box;
+			cursor: pointer;
+			height: 28px;
+			outline: none;
+			position: absolute;
+			-ms-touch-action: none;
+			touch-action: none;
+			transition: left 300ms ease-out, right 300ms ease-out, bottom 300ms ease-out, transform 300ms ease-out;
+			width: 28px;
+			z-index: 10;
+			background-color: #f8f8ff;
+			border: 1px solid lightgrey;
+			margin-left: -10px;
+			top: calc(50% - 10px);
+		}
+
+		/* apply the gradeient styles to the range element the of slider */
+		.e-control-wrapper.e-slider-container .e-slider .e-range,
+		.e-control-wrapper.e-slider-container .e-slider.e-hover .e-range {
+			background: transparent;
+		}
+
+		/* prevent the large thumb styles of material theme */
+		.e-control-wrapper.e-slider-container .e-slider .e-handle.e-large-thumb-size {
+			transform: none !important;
+		}
+	</style>
+	</div>
+</body>
+
+</html>
